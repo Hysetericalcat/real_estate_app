@@ -1,7 +1,11 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function Navbar({ onMenuPress }: { onMenuPress: () => void }) {
+type NavbarProps = {
+    onMenuPress: () => void; //function returns nothing for now.
+    onFilterPress: () => void;
+  };
+export default function Navbar({ onMenuPress, onFilterPress }: NavbarProps) {
     const styles = StyleSheet.create({
         navbar: {
           height: 56,
@@ -46,6 +50,15 @@ export default function Navbar({ onMenuPress }: { onMenuPress: () => void }) {
           fontWeight: '600',
           color: '#FFFFFF',
         },
+        filterBtn: {
+            width: 36, height: 36,
+            borderRadius: 10,
+            backgroundColor: '#F0FDF9',
+            borderWidth: 1.5,
+            borderColor: '#0F766E',
+            alignItems: 'center',
+            justifyContent: 'center',
+          },
       });
   return (
     <View style={styles.navbar}>
