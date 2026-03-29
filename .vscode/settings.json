@@ -1,7 +1,6 @@
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit",
-    "source.sortMembers": "explicit"
+   
   }
 }
+//Lint is a tool that statically analyzes your code for errors, bad practices, and style issues ->here imports were responsible for fixing ESlint errors -> but line was not able to recognise tsx code
